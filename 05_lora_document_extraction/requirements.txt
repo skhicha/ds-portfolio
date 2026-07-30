@@ -1,0 +1,5 @@
+torch>=2.1
+transformers>=4.40
+peft>=0.10
+accelerate>=0.28
+bitsandbytes>=0.43; sys_platform == "linux"
