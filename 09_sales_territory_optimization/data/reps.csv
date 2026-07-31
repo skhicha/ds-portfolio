@@ -1,0 +1,29 @@
+rep_id,rep_name,region,current_territory_id,skill_level,experience_years,productivity_multiplier,annual_cost,max_capacity_fte
+R001,Riley Young,Midwest,T013,Junior,2,0.768,61623.41,1.0
+R002,Finley Smith,West,T019,Mid,5,1.008,79583.66,1.0
+R003,Shawn Johnson,Northeast,T016,Junior,2,0.709,54183.41,1.0
+R004,Cameron Thomas,Northeast,T016,Mid,7,1.026,75710.84,1.0
+R005,Shawn Johnson 2,Southeast,T012,Junior,2,0.753,56149.34,1.0
+R006,Quinn Davis,Midwest,T014,Mid,4,1.086,77350.34,1.0
+R007,Harper Harris,West,T019,Mid,7,1.004,82182.24,1.0
+R008,Sage Kim,Midwest,T014,Senior,11,1.412,111392.56,1.0
+R009,Charlie Clark,Midwest,T004,Junior,4,0.766,58222.95,0.75
+R010,Avery Garcia,Northwest,T008,Senior,10,1.384,106969.09,0.75
+R011,Finley Johnson,Northeast,T016,Junior,0,0.8,49131.82,1.0
+R012,Adrian Martin,Southwest,T017,Junior,0,0.777,63516.99,1.0
+R013,Alex Young,Southwest,T017,Mid,8,1.147,80050.31,1.0
+R014,Remy Johnson,Midwest,T007,Mid,8,1.072,80812.86,1.0
+R015,Sawyer Martinez,West,T010,Senior,10,1.365,121347.65,1.0
+R016,Shawn Green,Southeast,T012,Senior,9,1.379,124720.27,1.0
+R017,Kendall Adams,Northwest,T008,Junior,4,0.802,53913.73,1.0
+R018,Hayden Martin,Southeast,T012,Senior,8,1.389,110727.0,1.0
+R019,Quinn Taylor,Southwest,T017,Junior,0,0.696,56366.22,1.0
+R020,Devon Chen,Southwest,T017,Mid,6,1.065,90314.79,1.0
+R021,Riley White,Northwest,T008,Junior,1,0.771,51952.57,0.75
+R022,Sage Martin,Midwest,T015,Senior,10,1.526,113018.89,1.0
+R023,Morgan Martinez,Southeast,T012,Junior,1,0.854,59009.35,0.5
+R024,Devon Nguyen,Northeast,T005,Junior,2,0.727,58539.06,1.0
+R025,Devon Kim,Midwest,T014,Mid,8,1.066,83695.38,0.75
+R026,Morgan Baker,West,T009,Senior,10,1.327,113464.71,0.75
+R027,Remy Anderson,Northeast,T016,Senior,11,1.38,109400.42,0.5
+R028,Peyton Thomas,Northwest,T008,Mid,1,1.026,77947.31,0.75

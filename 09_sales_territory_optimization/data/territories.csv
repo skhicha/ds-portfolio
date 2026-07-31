@@ -1,0 +1,21 @@
+territory_id,territory_name,region,required_fte,required_visits_per_month,potential_revenue,min_coverage_pct
+T001,Coastal Territory,Northeast,1.99,39,460685.64,0.5
+T002,Bay Corridor,West,2.35,42,653410.16,0.69
+T003,West Region,West,1.32,32,507958.09,0.61
+T004,North Cluster,Midwest,1.39,32,328242.21,0.58
+T005,North Area,Northeast,1.55,37,300688.62,0.56
+T006,Lakeside Belt,Northwest,1.1,27,272285.35,0.67
+T007,Coastal Basin,Midwest,1.01,22,252967.13,0.58
+T008,Valley Sector,Northwest,1.56,35,528621.54,0.48
+T009,Greater Territory,West,1.16,22,363877.75,0.49
+T010,Coastal Basin 2,West,1.87,35,688413.52,0.79
+T011,South Basin,West,1.5,35,509152.87,0.77
+T012,River Zone,Southeast,2.13,46,591144.96,0.69
+T013,Bay District,Midwest,1.92,43,720700.59,0.54
+T014,Bay Territory,Midwest,1.3,31,286095.55,0.79
+T015,Valley Sector 2,Midwest,2.13,49,395010.41,0.72
+T016,Bay District 2,Northeast,2.09,47,421368.01,0.7
+T017,South Sector,Southwest,1.42,32,501780.07,0.61
+T018,Coastal Sector,Northeast,1.26,26,366471.67,0.55
+T019,Lakeside Zone,West,1.89,34,413352.88,0.48
+T020,North Belt,West,1.02,22,306255.76,0.77
