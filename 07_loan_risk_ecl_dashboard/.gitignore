@@ -1,0 +1,33 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# NOTE on data/loan_book.db:
+# We deliberately do NOT ignore data/*.db here. A small, freshly-generated
+# SQLite database is committed to the repo so the dashboard works
+# out-of-the-box (`streamlit run app.py`) right after a fresh `git clone`,
+# without requiring `python src/etl.py` first. If you regenerate the data
+# (e.g. with a different --seed or --n-loans), just commit the new
+# data/loan_book.db in its place. See README.md "Data" section.
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Coverage
+.coverage
+htmlcov/
