@@ -83,10 +83,11 @@ loan-portfolio-risk-ecl-dashboard/
 
 ```bash
 # 1. Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate            # Windows: venv\Scripts\activate
+python3 -m venv .venv
+source .venv/bin/activate           # Windows: .venv\Scripts\activate
 
-# 2. Install dependencies
+# 2. Install dependencies (single resolver pass, all from PyPI)
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # 3. (Re)generate the synthetic loan book -> data/loan_book.db
@@ -94,7 +95,7 @@ python src/etl.py                   # or: python -m src.etl
 #   optional flags: --n-loans 3500 --seed 42 --as-of-date 2026-06-30
 
 # 4. Run the dashboard
-streamlit run app.py
+python -m streamlit run app.py
 
 # 5. Run the test suite
 pytest
@@ -103,6 +104,36 @@ pytest
 The dashboard reads `data/loan_book.db`; if it doesn't exist yet, `app.py`
 will show a clear message telling you to run `python src/etl.py` first
 rather than crashing.
+
+### A note on environments: use pip *or* conda, never both
+
+All the packages in `requirements.txt` that touch native code (`numpy`,
+`scipy`, `scikit-learn`, `pyarrow`) must come from a **single installer**.
+Mixing a conda-installed `numpy` (built against conda-forge's OpenBLAS)
+with a pip-installed `pyarrow` wheel (or vice versa) in the same
+environment causes binary ABI mismatches that surface as a segmentation
+fault — typically deep inside `pyarrow`/`pandas` Arrow conversion, e.g.
+when Streamlit renders an Altair chart via `st.altair_chart`. This isn't a
+version-pinning problem; version numbers can match exactly and it will
+still crash, because the two binaries were compiled against different
+toolchains.
+
+If you use `venv` + `pip` (as above), everything resolves from PyPI wheels
+built for the same ABI, and there's no issue. If you prefer conda, install
+*all* of `numpy`/`scipy`/`scikit-learn`/`pyarrow` via
+`conda install -c conda-forge ...` — don't `pip install --no-deps` any of
+them into a conda env afterward.
+
+If `streamlit run app.py` ever segfaults, get a stack trace before trying
+anything else:
+
+```bash
+python -X faulthandler -m streamlit run app.py
+```
+
+The `Extension modules:` line and Python-level traceback in the crash
+output will show which native library was executing at the moment of the
+crash — that's the one to check for a mixed-installer conflict.
 
 ### Data: why the database is committed
 
