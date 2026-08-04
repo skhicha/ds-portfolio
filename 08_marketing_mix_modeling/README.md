@@ -94,7 +94,7 @@ python -m src.report
 # -> prints the real R^2 / MAE / MAPE achieved, writes output/mmm_report.xlsx
 
 # 5. Launch the interactive dashboard
-streamlit run app.py
+python -m streamlit run app.py
 # open http://localhost:8501
 
 # 6. Run the test suite
