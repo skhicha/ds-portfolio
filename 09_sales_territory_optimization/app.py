@@ -77,10 +77,17 @@ with st.sidebar:
 
     solve_clicked = st.button("Solve LP", type="primary")
 
-if "result" not in st.session_state or solve_clicked:
+data_signature = (len(reps_df), len(territories_df), budget)
+
+if (
+    "result" not in st.session_state
+    or st.session_state.get("result_signature") != data_signature
+    or solve_clicked
+):
     with st.spinner("Solving LP with scipy.optimize.linprog (HiGHS)..."):
         result = solve_allocation(reps_df, territories_df, budget=budget)
     st.session_state["result"] = result
+    st.session_state["result_signature"] = data_signature
 else:
     result = st.session_state["result"]
 
