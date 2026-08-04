@@ -186,7 +186,7 @@ python -m src.report                   # solve + write Excel report only
 ### Optional Streamlit viewer
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 Lets you regenerate data at a different size, toggle a budget cap, switch
