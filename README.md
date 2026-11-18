@@ -58,6 +58,12 @@ A collection of end-to-end data science and machine learning projects covering N
 - **What:** Linear program (solved exactly via `scipy.optimize.linprog`) allocating reps to territories to maximize net revenue subject to coverage and capacity constraints, benchmarked against a naive baseline
 - **Result:** +114.7% net revenue vs. baseline on the bundled instance, 21 passing tests including an independent recomputation of the objective value
 
+### 10. 💊 Pharma Customer Segmentation & Targeting Analytics
+
+- **Tech:** Python, Scikit-learn, K-Means, PCA, Streamlit
+- **What:** PCA + K-Means clustering on synthetic physician prescription data (with hidden, internally consistent behavioral archetypes) to identify high-value customer segments, with an elbow + silhouette-validated k selection and a decile-based targeting model scoring physicians for commercial outreach
+- **Result:** k=4 segments at silhouette ≈ 0.209 on the bundled dataset, 60 passing tests including degenerate/edge-case clustering inputs, automated Excel client report
+
 ## Skills Demonstrated
 
 - Exploratory Data Analysis (EDA) and feature engineering
@@ -69,6 +75,7 @@ A collection of end-to-end data science and machine learning projects covering N
 - Risk analytics: delinquency/roll-rate modeling, IFRS 9 / Ind AS 109 ECL staging, PD/LGD/EAD
 - Marketing analytics: adstock/carryover modeling, saturation curves, channel attribution
 - Optimization: Linear Programming (SciPy), constrained allocation, sensitivity analysis
+- Customer analytics: unsupervised segmentation (K-Means, PCA dimensionality reduction), cluster validation (elbow method, silhouette score), decile-based targeting/scoring models
 - SQL: parameterised queries, joins, views, window functions
 - Deployment: Streamlit web applications, automated Excel reporting (openpyxl)
 - Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Statsmodels, SciPy, SpaCy, LangChain, PyTorch, Hugging Face Transformers/PEFT
