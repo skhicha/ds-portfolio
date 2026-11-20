@@ -7,26 +7,26 @@ A collection of end-to-end data science and machine learning projects covering N
 ### 1. 📄 Insurance Document NLP Extractor
 
 - **Tech:** Python, SpaCy, PDFPlumber, TF-IDF, Scikit-learn, Streamlit
-- **What:** Extracts structured entities from unstructured insurance PDFs using NER + Regex
-- **Result:** 88%+ field-level accuracy across diverse document formats
+- **What:** Extracts structured entities (policy number, insurer, premium, dates, sum insured) from unstructured insurance PDFs via regex + SpaCy NER, cross-checked against a TF-IDF/cosine-similarity schema matcher
+- **Result:** 18/18 fields (100%) extracted correctly across the 3 bundled sample PDFs; 94% TF-IDF schema-match agreement; 45 passing tests
 
 ### 2. 🤖 LLM-Powered Document Q&A Tool (RAG)
 
-- **Tech:** Python, OpenAI/Gemini API, LangChain, FAISS, Streamlit
-- **What:** Retrieval-Augmented Generation system for querying business documents
-- **Result:** 40% reduction in manual document review time
+- **Tech:** Python, LangChain, FAISS, Gemini/OpenAI API, Streamlit
+- **What:** Retrieval-Augmented Generation system for querying business documents — PDF ingestion, chunking, embeddings + FAISS retrieval, and a citation-attaching LLM answer chain (offline TF-IDF embedding fallback when no API key is set)
+- **Result:** Retrieval correctly ranks the relevant document per query across the 3 bundled sample PDFs (16 chunks total) with zero API key required; 34 passing tests, with the LLM/embedding layer mocked for fully offline testing
 
 ### 3. 🏠 House Price Prediction — End-to-End ML Pipeline
 
 - **Tech:** Python, Scikit-learn, XGBoost, Pandas, Matplotlib, Streamlit
-- **What:** Complete ML pipeline on Ames Housing dataset with EDA, feature engineering, model comparison
-- **Result:** Best RMSE of 18,500 with Random Forest after hyperparameter tuning
+- **What:** Complete ML pipeline on the California Housing dataset (used as a free, openly-disclosed stand-in for Ames Housing) with EDA, feature engineering, and a 4-model comparison
+- **Result:** Best RMSE $48,576 / R² 0.82 with XGBoost (tuned Random Forest via RandomizedSearchCV: RMSE $50,610 / R² 0.80); 35 passing tests
 
 ### 4. ⚡ Energy Consumption Forecasting — Time-Series ML
 
-- **Tech:** Python, Scikit-learn, XGBoost, SARIMA, Pandas, Matplotlib
-- **What:** Time-series forecasting on hourly energy consumption with lag features and rolling stats
-- **Result:** XGBoost achieved 4.2% MAPE, outperforming SARIMA baseline by 1.8 pp
+- **Tech:** Python, Scikit-learn, XGBoost, SARIMA (Statsmodels), Pandas, Matplotlib, Streamlit
+- **What:** Time-series forecasting on the PJME hourly energy consumption dataset with ADF stationarity testing, calendar/lag/rolling-window feature engineering, and an XGBoost-vs-SARIMA comparison
+- **Result:** XGBoost achieved ≈0.86% MAPE (RMSE ≈362 MW) on hourly data; SARIMA baseline on a daily-resampled subset achieved ≈8.17% MAPE; 29 passing tests
 
 ### 5. 🔧 LoRA Fine-Tuning — Document Field Extraction
 
