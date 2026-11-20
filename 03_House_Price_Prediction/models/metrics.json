@@ -1,0 +1,53 @@
+{
+  "baseline_results": [
+    {
+      "name": "Linear Regression",
+      "rmse": 66694.81892012402,
+      "r2": 0.6605488099784373,
+      "mae": 45746.496037232326,
+      "train_seconds": 0.03104114532470703
+    },
+    {
+      "name": "Ridge Regression",
+      "rmse": 66690.14831688056,
+      "r2": 0.6605963514918847,
+      "mae": 45744.94669549563,
+      "train_seconds": 0.007017612457275391
+    },
+    {
+      "name": "Random Forest",
+      "rmse": 51217.522116699394,
+      "r2": 0.7998155831245877,
+      "mae": 32086.86413795593,
+      "train_seconds": 0.8320803642272949
+    },
+    {
+      "name": "XGBoost",
+      "rmse": 48575.82512733435,
+      "r2": 0.819933255496393,
+      "mae": 31414.237216590063,
+      "train_seconds": 10.449145317077637
+    }
+  ],
+  "best_baseline_name": "XGBoost",
+  "tuned_rmse": 50609.914069646315,
+  "tuned_r2": 0.804537099129512,
+  "tuned_mae": 31697.902796586353,
+  "best_params": {
+    "n_estimators": 300,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": 0.5,
+    "max_depth": null
+  },
+  "feature_names": [
+    "MedInc",
+    "HouseAge",
+    "AveRooms",
+    "AveBedrms",
+    "Population",
+    "AveOccup",
+    "Latitude",
+    "Longitude"
+  ]
+}
